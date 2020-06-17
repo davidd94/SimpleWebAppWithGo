@@ -1,10 +1,10 @@
 package main
 
 import (
-	"fmt"
 	"io/ioutil"
 )
 
+// Page -> some comment to get rid of linter msg.. or use lower case "page"
 type Page struct {
 	Title string
 	Body  []byte
@@ -13,14 +13,10 @@ type Page struct {
 func mainWiki() {
 
 	homePage1 := &Page{
-		Title: "David's Homepage",
+		Title: "afk",
 		Body:  []byte("Hello World from David's house!"),
 	}
 	homePage1.save()
-
-	homePage2, _ := loadPage("David's Homepage")
-	// homePage2, _ := loadPage(homePage1.Title)
-	fmt.Println(string(homePage2.Body))
 
 }
 

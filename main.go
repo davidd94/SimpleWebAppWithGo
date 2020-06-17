@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"net/http"
 )
 
 func main() {
@@ -10,5 +12,7 @@ func main() {
 	mainWiki()
 	// homeView()
 	viewView()
+	viewEdit()
 
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }

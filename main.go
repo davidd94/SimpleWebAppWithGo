@@ -10,9 +10,7 @@ func main() {
 	fmt.Println("this is my main main")
 
 	mainWiki()
-	// homeView()
-	viewView()
-	viewEdit()
+	viewMain()
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
